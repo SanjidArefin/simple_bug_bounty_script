@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-"""
-Simple lab-only bug bounty helper.
-
-Features:
-1) Simple subdomain discovery (wordlist-based DNS resolve)
-2) Simple TCP port scan
-3) Basic localhost-focused security checks
-4) Optional scheduler to run every N hours (default: 24)
-
-Use only on systems you own or are explicitly authorized to test.
-"""
 
 from __future__ import annotations
 
@@ -20,27 +9,27 @@ import time
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 
 DEFAULT_SUBDOMAIN_WORDS = ["www", "api", "dev", "test", "staging", "admin"]
 DEFAULT_PORTS = [
-    21,   # FTP
-    22,   # SSH
-    23,   # Telnet
-    25,   # SMTP
-    53,   # DNS
-    80,   # HTTP
-    110,  # POP3
-    139,  # NetBIOS
-    143,  # IMAP
-    443,  # HTTPS
-    445,  # SMB
-    3306, # MySQL
-    3389, # RDP
-    5432, # PostgreSQL
-    6379, # Redis
-    8080, # HTTP-alt
+    21,
+    22,
+    23,
+    25,
+    53,
+    80,
+    110,
+    139,
+    143,
+    443,
+    445,
+    3306,
+    3389,
+    5432,
+    6379,
+    8080,
 ]
 
 
@@ -55,7 +44,6 @@ class HostResult:
 def discover_subdomains(base_domain: str, words: List[str]) -> Dict[str, str]:
     discovered: Dict[str, str] = {}
 
-    # Include the base domain itself.
     candidates = [base_domain] + [f"{w}.{base_domain}" for w in words]
     for name in candidates:
         try:
@@ -203,7 +191,6 @@ def main() -> None:
         print(f"\n[+] Report written to: {output.resolve()}")
         return
 
-    # Scheduler mode
     interval_seconds = max(args.interval_hours, 0.01) * 3600
     print(
         f"[*] Starting scheduled scan for '{args.domain}' every {args.interval_hours} hour(s). "
