@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-03-01T04:55:29",
+  "base_domain": "localhost",
+  "results": [
+    {
+      "host": "localhost",
+      "ip": "127.0.0.1",
+      "open_ports": [
+        445,
+        8080
+      ],
+      "findings": [
+        "SMB open (verify patching and access controls).",
+        "Missing X-Frame-Options header (basic clickjacking hardening).",
+        "Missing X-Content-Type-Options header."
+      ]
+    },
+    {
+      "host": "www.localhost",
+      "ip": "127.0.0.1",
+      "open_ports": [
+        445,
+        8080
+      ],
+      "findings": [
+        "SMB open (verify patching and access controls).",
+        "Missing X-Frame-Options header (basic clickjacking hardening).",
+        "Missing X-Content-Type-Options header."
+      ]
+    },
+    {
+      "host": "api.localhost",
+      "ip": "127.0.0.1",
+      "open_ports": [
+        445,
+        8080
+      ],
+      "findings": [
+        "SMB open (verify patching and access controls).",
+        "Missing X-Frame-Options header (basic clickjacking hardening).",
+        "Missing X-Content-Type-Options header."
+      ]
+    },
+    {
+      "host": "dev.localhost",
+      "ip": "127.0.0.1",
+      "open_ports": [
+        445,
+        8080
+      ],
+      "findings": [
+        "SMB open (verify patching and access controls).",
+        "Missing X-Frame-Options header (basic clickjacking hardening).",
+        "Missing X-Content-Type-Options header."
+      ]
+    },
+    {
+      "host": "test.localhost",
+      "ip": "127.0.0.1",
+      "open_ports": [
+        445,
+        8080
+      ],
+      "findings": [
+        "SMB open (verify patching and access controls).",
+        "Missing X-Frame-Options header (basic clickjacking hardening).",
+        "Missing X-Content-Type-Options header."
+      ]
+    },
+    {
+      "host": "staging.localhost",
+      "ip": "127.0.0.1",
+      "open_ports": [
+        445,
+        8080
+      ],
+      "findings": [
+        "SMB open (verify patching and access controls).",
+        "Missing X-Frame-Options header (basic clickjacking hardening).",
+        "Missing X-Content-Type-Options header."
+      ]
+    },
+    {
+      "host": "admin.localhost",
+      "ip": "127.0.0.1",
+      "open_ports": [
+        445,
+        8080
+      ],
+      "findings": [
+        "SMB open (verify patching and access controls).",
+        "Missing X-Frame-Options header (basic clickjacking hardening).",
+        "Missing X-Content-Type-Options header."
+      ]
+    }
+  ]
+}
